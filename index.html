@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Li Zhen — Developer</title>
+
+  <!-- Code Font -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP + Plugins -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Maze Preloader Container -->
+  <div id="maze-container">
+    <canvas id="maze"></canvas>
+    <!-- A little cartoon sprite (e.g. mouse or avatar) -->
+    <div id="player"></div>
+    <div id="maze-instructions">Use ← ↑ → ↓ to escape!</div>
+  </div>
+
+  <!-- 2) Main Content (hidden until maze solved) -->
+  <div id="main-content">
+    <!-- Page 1: Hero -->
+    <div id="page1" class="page current">
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <h1 id="name" class="code-font"></h1>
+        <a href="#page2" class="nav">Go to Page 2 →</a>
+      </div>
+    </div>
+
+    <!-- Page 2: About -->
+    <div id="page2" class="page">
+      <section class="reveal">
+        <h2>About Me</h2>
+        <p>I’m Li Zhen, a software engineer and researcher specializing in program analysis and AI-driven debugging tools.</p>
+      </section>
+      <a href="#page1" class="nav">← Back to Page 1</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="maze.js"></script>
+  <script src="transitions-gsap.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
